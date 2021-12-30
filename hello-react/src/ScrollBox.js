@@ -15,6 +15,7 @@ class ScrollBox extends Component {
       height: '650px',
       background: 'linear-gradient(white, black)',
     };
+
     return (
       <div
         style={style}
