@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import MySample from './MySample';
+import LifeCycleSample from './LifeCycleSample';
 
 function getRandomColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <MySample color={this.state.color} />
+        <LifeCycleSample color={this.state.color} />
       </div>
     );
   }

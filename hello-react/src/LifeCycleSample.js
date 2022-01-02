@@ -40,14 +40,6 @@ class LifeCycleSample extends Component {
     });
   };
 
-  handleClick2 = () => {
-    console.log(this.state.color);
-    this.setState({
-      color: '#000000',
-    });
-    console.log(this.state.color);
-  };
-
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
@@ -77,7 +69,6 @@ class LifeCycleSample extends Component {
         </h1>
         <p>color: {this.state.color}</p>
         <button onClick={this.handleClick}>더하기</button>
-        <button onClick={this.handleClick2}>색 초기화</button>
       </div>
     );
   }
