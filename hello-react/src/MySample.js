@@ -1,8 +1,7 @@
 import { Component } from 'react';
 
-class LifeCycleSample extends Component {
+class MySample extends Component {
   state = {
-    number: 0,
     color: null,
   };
 
@@ -27,18 +26,12 @@ class LifeCycleSample extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
-    return nextState.number % 10 !== 4;
+    return true;
   }
 
   componentWillUnmount() {
     console.log('componentWillUnmount');
   }
-
-  handleClick = () => {
-    this.setState({
-      number: this.state.number + 1,
-    });
-  };
 
   handleClick2 = () => {
     console.log(this.state.color);
@@ -73,14 +66,13 @@ class LifeCycleSample extends Component {
     return (
       <div>
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
-          {this.state.number}
+          Sample
         </h1>
         <p>color: {this.state.color}</p>
-        <button onClick={this.handleClick}>더하기</button>
         <button onClick={this.handleClick2}>색 초기화</button>
       </div>
     );
   }
 }
 
-export default LifeCycleSample;
+export default MySample;
