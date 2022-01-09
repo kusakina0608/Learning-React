@@ -1,7 +1,7 @@
-import Info from "./Info";
+import Counter from "./Counter";
 
 function App() {
-  return <Info />;
+  return <Counter />;
 }
 
 export default App;
