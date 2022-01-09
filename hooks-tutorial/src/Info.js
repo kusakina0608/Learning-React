@@ -5,12 +5,10 @@ const Info = () => {
 
   useEffect(() => {
     console.log("effect");
-    console.log(name);
     return () => {
-      console.log("cleanup");
-      console.log(name);
+      console.log("unmount");
     };
-  }, [name]);
+  }, []);
 
   const onChangeName = (e) => {
     setName(e.target.value);
