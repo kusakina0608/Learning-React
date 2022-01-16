@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
+
 const Info = () => {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
 
   useEffect(() => {
     console.log("effect");
+    console.log(name);
     return () => {
-      console.log("unmount");
+      console.log("cleanup");
+      console.log(name);
     };
-  }, []);
+  }, [name]);
 
   const onChangeName = (e) => {
     setName(e.target.value);
