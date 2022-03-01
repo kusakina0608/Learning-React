@@ -1,7 +1,14 @@
-import SassComponent from "./SassComponent";
+import { Component } from "react";
+import StyledComponent from "./StyledComponent";
 
-const App = () => {
-  return <SassComponent />;
-};
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <StyledComponent />
+      </div>
+    );
+  }
+}
 
 export default App;
